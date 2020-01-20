@@ -1,28 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using classes.Math;
 
-namespace helloworld
+namespace classes
 {
+    
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Person pat = new Person();
+            pat.FirstName = "pat";
+            pat.LastName = "will";
+            pat.Introduce();
 
-            int number;
-            number = 3;
-
-            const float pi = 3.14f;
-            float totalPrice = 20.95f;
-            string me = "pat";
-            byte lumber = 2;
-            Console.WriteLine(lumber + " :byte" + number + " :number" + pi + " :float");
-            Console.WriteLine(me + " :string"  + " :number" + pi + " :float");
-           
+            Calculator calculator = new Calculator();
+            var result = calculator.Add(1, 2);
+            Console.WriteLine(result);
         }
-
     }
 }
